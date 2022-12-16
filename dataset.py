@@ -34,7 +34,7 @@ def run_check_dataset(json_path):
 		dataset,
 		sampler = SequentialSampler(dataset),
 		batch_size  = 8,
-		drop_last   = True,
+		drop_last   = True, #
 		num_workers = 0,   # if debug  num_workers= 0
 		pin_memory  = False,
 		# worker_init_fn = lambda id: np.random.seed(torch.initial_seed() // 2 ** 32 + id)
@@ -56,3 +56,6 @@ def run_check_dataset(json_path):
 if __name__ == '__main__':
     json = "/home/jupyter/share/SotaTransformerModel/SwinMR/options/SwinMR/example/train_swinmr_CCnpi_G1D30.json"
     run_check_dataset(json)
+    
+    
+    #dasdasdasasfsafd
