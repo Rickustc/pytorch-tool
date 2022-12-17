@@ -53,6 +53,13 @@ def run_check_dataset(json_path):
             print('\t',v.reshape(-1)[:8])
         print('')
         
+    #方法二：
+    train_loader = iter(loader)
+    for i in range(5):
+        img,target = next(train_iter)
+        print(img.shape, target.shape)
+        
+    #本质上是说对于迭代器对象不同的调用方法
 if __name__ == '__main__':
     json = "/home/jupyter/share/SotaTransformerModel/SwinMR/options/SwinMR/example/train_swinmr_CCnpi_G1D30.json"
     run_check_dataset(json)
